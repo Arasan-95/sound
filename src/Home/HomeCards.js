@@ -1,25 +1,32 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeadphones, faMusic, faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { useMediaQuery } from 'react-responsive'
 
-export default class HomeCards extends Component {
+function HomeCards(){
 
-    rowStyle = {
+    const rowStyle = {
         marginTop: '0px',
         marginBottom:'0px'
-    }
+    };
 
-    bigIcon = {
+    const bigIcon = {
         fontSize: '50px'
-    }
+    };
 
-    render() {
-        return (
-            <div className='row white-text' style={this.rowStyle} id='home-2'>
-                <div className='col s12 m3' style={{ paddingTop: '300px' }}>
+    const isMobile = useMediaQuery({ maxDeviceWidth: 600 });
+
+    function getCardStyle(pad){
+        return isMobile===false?{ paddingTop:pad  }:{ paddingTop: '30px',height:'300px' }
+    };
+
+    return (
+            <div>
+            <div className='row white-text' style={rowStyle} id='home-2'>
+                <div className='col s12 m3' style={getCardStyle('300px')}>
                     <div className='card medium center transparent z-depth-0'>
                         <div className='card-title '>
-                            <FontAwesomeIcon icon={faPlayCircle} style={this.bigIcon} />
+                            <FontAwesomeIcon icon={faPlayCircle} style={bigIcon} />
                             <div className='card-title white-text'>Play</div>
                         </div>
                         <div className='card-content'>
@@ -30,10 +37,10 @@ export default class HomeCards extends Component {
                     </div>
                 </div>
 
-                <div className='col s12 m3' style={{ paddingTop: '140px' }} >
+                <div className='col s12 m3' style={getCardStyle('140px')}>
                     <div className='card medium center transparent z-depth-0'>
                         <div className='card-title'>
-                            <FontAwesomeIcon icon={faHeadphones} style={this.bigIcon} />
+                            <FontAwesomeIcon icon={faHeadphones} style={bigIcon} />
                             <div className='card-title white-text'>Favourite</div>
                         </div>
                         <div className='card-content'>
@@ -43,10 +50,10 @@ export default class HomeCards extends Component {
                     </div>
                 </div>
 
-                <div className='col s12 m3' style={{ paddingTop: '350px' }}>
+                <div className='col s12 m3' style={getCardStyle('350px')}>
                     <div className='card medium center transparent z-depth-0'>
                         <div className='card-title'>
-                            <FontAwesomeIcon icon={faPlay} style={this.bigIcon} />
+                            <FontAwesomeIcon icon={faPlay} style={bigIcon} />
                             <div className='card-title white-text'>Quality</div>
                         </div>
                         <div className='card-content'>
@@ -56,10 +63,10 @@ export default class HomeCards extends Component {
                     </div>
                 </div>
 
-                <div className='col s12 m3' style={{ paddingTop: '250px' }}>
+                <div className='col s12 m3' style={getCardStyle('250px')}>
                     <div className='card medium center transparent z-depth-0'>
                         <div className='card-title'>
-                            <FontAwesomeIcon icon={faMusic} style={this.bigIcon} />
+                            <FontAwesomeIcon icon={faMusic} style={bigIcon} />
                             <div className='card-title white-text'>Videos</div>
                         </div>
                         <div className='card-content'>
@@ -69,6 +76,8 @@ export default class HomeCards extends Component {
                     </div>
                 </div>
             </div>
+            </div>
         );
-    }
 }
+
+export default HomeCards

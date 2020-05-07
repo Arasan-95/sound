@@ -14,7 +14,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className='row white-text' style={this.rowStyle} id='home-1'>
-                <div className='col s12 m6 offset-m2' style={{ paddingTop: '250px',paddingBottom:'50px' }}>
+                <div className='col s12 m6 offset-m2' style={{ paddingTop: '150px',paddingBottom:'50px' }}>
                     <div className='card medium center transparent z-depth-1'>
                         
                         <div className='card-title'>
