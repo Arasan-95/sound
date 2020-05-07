@@ -70,7 +70,7 @@ function HomeCards(){
                             <div className='card-title white-text'>Videos</div>
                         </div>
                         <div className='card-content'>
-                            <span>MOre curious to watch the video of your favourite song
+                            <span>More curious to watch the video of your favourite song
                             We got you !</span>
                         </div>
                     </div>
