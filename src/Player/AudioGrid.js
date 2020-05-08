@@ -6,14 +6,12 @@ function AudioGrid() {
 
 
     const grids = data.songs.map(item=>{
-        return <AudioCard data={item}/>
+        return <AudioCard data={item} key={item.title}/>
     });
 
-    console.log(grids)
     return (
         <div className='container' id='audio-grid'>
             <div className="row" >
-                
                     { grids }
             </div>
         </div>

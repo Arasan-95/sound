@@ -18,7 +18,7 @@ export default class Home extends Component {
                     <div className='card medium center transparent z-depth-1'>
                         
                         <div className='card-title'>
-                            <img style={{maxWidth:'70px',height:'auto',objectFit:'contain'}} src={trevor} className='circle'/>
+                            <img style={{maxWidth:'70px',height:'auto',objectFit:'contain'}} src={trevor} className='circle' alt='homeImage'/>
                             <div className='black-text text-darken-5 top'>Trever McNevan</div>
                         </div>
                         

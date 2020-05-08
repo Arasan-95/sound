@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeadphones, faMusic, faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import { useMediaQuery } from 'react-responsive'

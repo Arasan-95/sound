@@ -14,7 +14,6 @@ var backgroundStyle = {
   backgroundImage: `url(${background})`,
   backgroundPosition: 'center',
   backgroundAttachment: 'fixed',
-  backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover'
 }
@@ -25,7 +24,6 @@ var backgroundStyle2 = {
   backgroundImage: `url(${background2})`,
   backgroundPosition: 'center',
   backgroundAttachment: 'fixed',
-  backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover'
 }
