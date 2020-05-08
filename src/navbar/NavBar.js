@@ -24,7 +24,7 @@ class NavBar extends Component{
                         <ul className='right hide-on-med-and-down' >
                             <li><a href='#home-1' style={{color:'black'}}>Home</a></li>
                             <li><a href='#home-2' style={{color:'black'}}>Music</a></li>
-                            <li><a href='#!' style={{color:'black'}}>Playlist</a></li>
+                            <li><a href='#audio-grid' style={{color:'black'}}>Playlist</a></li>
                             <li><a href='#!' style={{color:'black'}}><FontAwesomeIcon icon={faFacebook} /></a></li>
                             <li><a href='#!' style={{color:'black'}}><FontAwesomeIcon icon={faWhatsapp} /></a></li>
                             <li><a href='#!' style={{color:'black'}}><FontAwesomeIcon icon={faShareAlt} /></a></li>
@@ -45,7 +45,7 @@ class NavBar extends Component{
                     </li>
                     <li><a className='active' href='#home-1'>Home</a></li>
                     <li><a href='#home-2'>Music</a></li>
-                    <li><a href='#!'>Playlist</a></li>
+                    <li><a href='#audio-grid'>Playlist</a></li>
                     <li><a href='#!'>Contact</a></li>
                 </ul>   
             </div>

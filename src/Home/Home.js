@@ -30,7 +30,7 @@ export default class Home extends Component {
                             it was below and before speech, and it is above and beyond all words</blockquote>
                             
                             <div className='center'>
-                                <a href='#!' className='btn black-text transparent'>Playlist</a>
+                                <a href='#audio-grid' className='btn black-text transparent'>Playlist</a>
                             </div>
                         </div>
                     </div>
