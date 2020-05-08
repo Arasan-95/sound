@@ -10,7 +10,7 @@ class Footer extends Component {
                         <div className='row'>
                             <div className='col s4' >
                                 <ul>
-                                    <li><a style={{ color: 'black' }} href='#!'>Home</a></li>
+                                    <li><a style={{ color: 'black' }} href='#home-1'>Home</a></li>
                                     <li><a style={{ color: 'black' }} href='#!'>Contact</a></li>
                                 </ul>
                             </div>

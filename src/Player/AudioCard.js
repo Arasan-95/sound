@@ -11,7 +11,7 @@ const AudioCard = (props) => {
             <div className="card-image">
                 <img src={cover}  />
                 <span style={{ fontFamily: " 'Barlow', sans-serif" }} className="card-title">{title}</span>
-                <a className="btn-floating halfway-fab red"><i className="material-icons">play_arrow</i></a>
+                <a className="btn-floating halfway-fab green"><i className="material-icons">play_arrow</i></a>
             </div>
             <div className="card-content center-align">
                 <Player />

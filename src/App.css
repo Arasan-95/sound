@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+ background-color: green;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
