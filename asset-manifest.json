@@ -1,26 +1,34 @@
 {
   "files": {
     "main.css": "/sound/static/css/main.808858cf.chunk.css",
-    "main.js": "/sound/static/js/main.2f6a2903.chunk.js",
-    "main.js.map": "/sound/static/js/main.2f6a2903.chunk.js.map",
+    "main.js": "/sound/static/js/main.62051cc9.chunk.js",
+    "main.js.map": "/sound/static/js/main.62051cc9.chunk.js.map",
     "runtime-main.js": "/sound/static/js/runtime-main.fa4e5de5.js",
     "runtime-main.js.map": "/sound/static/js/runtime-main.fa4e5de5.js.map",
-    "static/js/2.58ea1833.chunk.js": "/sound/static/js/2.58ea1833.chunk.js",
-    "static/js/2.58ea1833.chunk.js.map": "/sound/static/js/2.58ea1833.chunk.js.map",
+    "static/js/2.ee6d5a08.chunk.js": "/sound/static/js/2.ee6d5a08.chunk.js",
+    "static/js/2.ee6d5a08.chunk.js.map": "/sound/static/js/2.ee6d5a08.chunk.js.map",
     "index.html": "/sound/index.html",
-    "precache-manifest.0fe96bd2e432b925f2de7ebd107a78fa.js": "/sound/precache-manifest.0fe96bd2e432b925f2de7ebd107a78fa.js",
+    "precache-manifest.da749b832867f05896693ea543b4159e.js": "/sound/precache-manifest.da749b832867f05896693ea543b4159e.js",
     "service-worker.js": "/sound/service-worker.js",
     "static/css/main.808858cf.chunk.css.map": "/sound/static/css/main.808858cf.chunk.css.map",
-    "static/js/2.58ea1833.chunk.js.LICENSE.txt": "/sound/static/js/2.58ea1833.chunk.js.LICENSE.txt",
+    "static/js/2.ee6d5a08.chunk.js.LICENSE.txt": "/sound/static/js/2.ee6d5a08.chunk.js.LICENSE.txt",
+    "static/media/all-i-need.jpg": "/sound/static/media/all-i-need.4231d605.jpg",
+    "static/media/big-love.jpg": "/sound/static/media/big-love.f346ae93.jpg",
     "static/media/cover-1.jpg": "/sound/static/media/cover-1.73262b02.jpg",
+    "static/media/faded.jpg": "/sound/static/media/faded.4afed9b9.jpg",
+    "static/media/hold-on.jpg": "/sound/static/media/hold-on.2a184b94.jpg",
     "static/media/image-2.jpg": "/sound/static/media/image-2.5b042289.jpg",
     "static/media/image-4.jpg": "/sound/static/media/image-4.c8bd82aa.jpg",
+    "static/media/lost-you.jpg": "/sound/static/media/lost-you.42cda350.jpg",
+    "static/media/lp-laura.jpg": "/sound/static/media/lp-laura.a01499e7.jpg",
+    "static/media/mosters.jpg": "/sound/static/media/mosters.435b457e.jpg",
+    "static/media/so-far-gone.jpg": "/sound/static/media/so-far-gone.f5541cd6.jpg",
     "static/media/trevor_mcnevan.jpg": "/sound/static/media/trevor_mcnevan.b301f18e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fa4e5de5.js",
-    "static/js/2.58ea1833.chunk.js",
+    "static/js/2.ee6d5a08.chunk.js",
     "static/css/main.808858cf.chunk.css",
-    "static/js/main.2f6a2903.chunk.js"
+    "static/js/main.62051cc9.chunk.js"
   ]
 }
