@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Player from './Player'
+import $ from 'jquery'
 
 class AudioCard2 extends Component {
 
@@ -10,6 +10,7 @@ class AudioCard2 extends Component {
     audio = null
     progress = null
     forward = null
+    audioAnchor = null
     
     state = {
         playing: false,
@@ -24,6 +25,28 @@ class AudioCard2 extends Component {
         this.progress = document.querySelector('.progress.green.'+this.albumId)
         this.forward = document.querySelector('.forward.'+this.albumId)
         this.backward = document.querySelector('.backward.'+this.albumId)
+        this.audioAnchor = document.querySelector('.audioAnchor')
+
+        $(window).on('scroll',function() {
+            var hT = $('.audioAnchor').offset().top,
+                hH = $('.audioAnchor').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+                let audioAnchor = document.querySelectorAll('.audioAnchor')
+            console.log(hT,hH,wH,wS)
+            if (wS > ((hT+hH-wH)-500)){
+                console.log('comment box section arrived! eh');
+                audioAnchor.forEach(item=>{
+                item.classList.add('animated' ,'slideInUp')
+              })
+            }else{
+                console.log('outside comment')
+                audioAnchor.forEach(item=>{
+                    item.classList.remove('animated' ,'slideInUp')
+                  })
+            }
+
+        });
 
         this.backward.addEventListener('click',()=>{
             if(this.audio.currentTime>0){
@@ -91,7 +114,6 @@ class AudioCard2 extends Component {
 
             let currentTime = Math.round(this.audio.currentTime)
             let duration = this.audio.duration
-            let currentWidth = this.state.progressStyle.width
             let prog = (currentTime/duration)*100
             this.setState({
                 duration: played+"/"+totaltime
@@ -103,6 +125,15 @@ class AudioCard2 extends Component {
             })
             
         },true)
+    }
+
+    animate=()=>{
+        let audioAnchor = document.querySelectorAll('.audioAnchor')
+        console.log(audioAnchor)
+        audioAnchor.forEach(item=>{
+            item.classList.toggle('animated')
+            item.classList.toggle('slideInUp')
+        })
     }
 
     play = () => {
@@ -119,10 +150,12 @@ class AudioCard2 extends Component {
         })
     }
 
+
+
     render() {
         return (
-            <div className="col s12 m6 l3" id={this.albumId} >
-            <div className="card z-depth-1" style={{ transform: 'translateX(0px)', opacity: 1 }}>
+           <div className="col s12 m6 l3 audioAnchor" id={this.albumId} >
+            <div className="card z-depth-1 " style={{ transform: 'translateX(0px)', opacity: 1 }}>
                 <div className="card-image">
                     <img src={this.cover} alt='coverImage' />
                     <span style={{ fontFamily: " 'Barlow', sans-serif", padding: '0px', fontSize: 'inherit' }} className="card-title">{this.title}</span>
@@ -146,7 +179,6 @@ class AudioCard2 extends Component {
             </div>
             <audio className={'aud '+this.albumId} src={this.songSrc}></audio>
         </div>
-
         )
     }
 }
