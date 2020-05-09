@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import trevor from '../image/trevor_mcnevan.jpg'
-
+import $ from 'jquery'
 export default class Home extends Component {
 
     rowStyle = {
@@ -11,12 +11,32 @@ export default class Home extends Component {
         fontSize: '50px'
     }
 
+    componentDidMount(){
+
+        $(window).on('scroll',function() {
+            var hT = $('#home-1').offset().top,
+                hH = $('#home-1').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+                let homecard = document.querySelector('.homecard')
+            console.log(hT,hH,wH,wS)
+            if (wS > ((hT+hH-wH)-400)){
+                console.log('came in')
+                homecard.classList.add('animated' ,'slideInUp')
+            }else{
+                homecard.classList.remove('animated' ,'slideInUp')
+                console.log('came out')
+            }
+
+        });
+    }
+
     render() {
         return (
             <div className='row white-text' style={this.rowStyle} id='home-1'>
            
                 <div className='col s12 m6 offset-m2' style={{ paddingTop: '150px',paddingBottom:'50px' }}>
-                    <div className='card medium center transparent z-depth-1'>
+                    <div className='homecard card medium center transparent z-depth-1'>
                         
                         <div className='card-title'>
                             <img style={{maxWidth:'70px',height:'auto',objectFit:'contain'}} src={trevor} className='circle' alt='homeImage'/>

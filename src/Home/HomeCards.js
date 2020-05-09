@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeadphones, faMusic, faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import { useMediaQuery } from 'react-responsive'
-
+import $ from 'jquery'
 function HomeCards(){
 
     const rowStyle = {
@@ -14,6 +14,27 @@ function HomeCards(){
         fontSize: '50px'
     };
 
+    $(window).on('scroll',function() {
+        var hT = $('#home-2').offset().top,
+            hH = $('#home-2').outerHeight(),
+            wH = $(window).height(),
+            wS = $(this).scrollTop();
+            let homecard2 = document.querySelectorAll('.homecard2')
+        console.log(hT,hH,wH,wS)
+        if (wS > ((hT+hH-wH)-400)){
+            console.log('came in')
+            homecard2.forEach(item=>{
+                item.classList.add('animated' ,'slideInUp')
+            })
+        }else{
+            homecard2.forEach(item=>{
+                item.classList.remove('animated' ,'slideInUp')
+            })
+            console.log('came out')
+        }
+
+    });
+
     const isMobile = useMediaQuery({ maxDeviceWidth: 600 });
 
     function getCardStyle(pad){
@@ -23,7 +44,7 @@ function HomeCards(){
     return (
             <div>
             <div className='row white-text' style={rowStyle} id='home-2'>
-                <div className='col s12 m3' style={getCardStyle('300px')}>
+                <div className='col s12 m3 homecard2' style={getCardStyle('300px')}>
                     <div className='card medium center transparent z-depth-0'>
                         <div className='card-title '>
                             <FontAwesomeIcon icon={faPlayCircle} style={bigIcon} />
@@ -37,7 +58,7 @@ function HomeCards(){
                     </div>
                 </div>
 
-                <div className='col s12 m3' style={getCardStyle('140px')}>
+                <div className='col s12 m3 homecard2' style={getCardStyle('140px')}>
                     <div className='card medium center transparent z-depth-0'>
                         <div className='card-title'>
                             <FontAwesomeIcon icon={faHeadphones} style={bigIcon} />
@@ -50,7 +71,7 @@ function HomeCards(){
                     </div>
                 </div>
 
-                <div className='col s12 m3' style={getCardStyle('350px')}>
+                <div className='col s12 m3 homecard2' style={getCardStyle('350px')}>
                     <div className='card medium center transparent z-depth-0'>
                         <div className='card-title'>
                             <FontAwesomeIcon icon={faPlay} style={bigIcon} />
@@ -63,7 +84,7 @@ function HomeCards(){
                     </div>
                 </div>
 
-                <div className='col s12 m3' style={getCardStyle('250px')}>
+                <div className='col s12 m3 homecard2' style={getCardStyle('250px')}>
                     <div className='card medium center transparent z-depth-0'>
                         <div className='card-title'>
                             <FontAwesomeIcon icon={faMusic} style={bigIcon} />

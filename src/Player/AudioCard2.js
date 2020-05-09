@@ -34,13 +34,11 @@ class AudioCard2 extends Component {
                 wS = $(this).scrollTop();
                 let audioAnchor = document.querySelectorAll('.audioAnchor')
             console.log(hT,hH,wH,wS)
-            if (wS > ((hT+hH-wH)-500)){
-                console.log('comment box section arrived! eh');
+            if (wS > ((hT+hH-wH)-400)){
                 audioAnchor.forEach(item=>{
                 item.classList.add('animated' ,'slideInUp')
               })
             }else{
-                console.log('outside comment')
                 audioAnchor.forEach(item=>{
                     item.classList.remove('animated' ,'slideInUp')
                   })
@@ -125,15 +123,6 @@ class AudioCard2 extends Component {
             })
             
         },true)
-    }
-
-    animate=()=>{
-        let audioAnchor = document.querySelectorAll('.audioAnchor')
-        console.log(audioAnchor)
-        audioAnchor.forEach(item=>{
-            item.classList.toggle('animated')
-            item.classList.toggle('slideInUp')
-        })
     }
 
     play = () => {
