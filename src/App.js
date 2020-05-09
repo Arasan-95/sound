@@ -22,7 +22,7 @@ let backgroundStyle = {
   height: "100%",
   backgroundImage: `url(${background})`,
   backgroundPosition: 'center',
-  backgroundAttachment: onMobile==true?'fixed':'scroll',
+  backgroundAttachment: onMobile==false?'fixed':'scroll',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover'
 }
@@ -32,7 +32,7 @@ let backgroundStyle2 = {
   height: "100%",
   backgroundImage: `url(${background2})`,
   backgroundPosition: 'center',
-  backgroundAttachment: onMobile==true?'fixed':'scroll',
+  backgroundAttachment: onMobile==false?'fixed':'scroll',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover'
 }
