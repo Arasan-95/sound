@@ -7,6 +7,7 @@ import HomeCards from './Home/HomeCards';
 import Home from './Home/Home';
 import Footer from './Footer/Footer';
 import AudioGrid from './Player/AudioGrid';
+import TestPlayer from './TestPlayer/TestPlayer';
 
 var backgroundStyle = {
   width: "100%",
@@ -29,6 +30,11 @@ var backgroundStyle2 = {
 }
 
 function App() {
+
+  // return (
+  //   <div>
+  //   <TestPlayer />
+  //   </div>)
 
   return (
     <div>

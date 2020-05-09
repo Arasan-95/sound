@@ -7,7 +7,7 @@ const AudioCard = (props) => {
 
     return (
         <div className="col s12 m6 l3" id={title} >
-        <div className="card z-depth-1">
+        <div className="card z-depth-1" style={{transform: 'translateX(0px)', opacity: 1}}>
             <div className="card-image">
                 <img src={cover} alt='coverImage' />
                 <span style={{ fontFamily: " 'Barlow', sans-serif",padding:'0px',fontSize:'inherit' }} className="card-title">{title}</span>
