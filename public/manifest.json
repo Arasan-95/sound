@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Sound App",
+  "name": "A responsive mobile compatible app",
   "icons": [
     {
       "src": "favicon.ico",
