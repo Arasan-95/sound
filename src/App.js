@@ -12,7 +12,7 @@ function App() {
     <div>
 
     <HomePage />
-      <HashRouter basename='/'>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Route path='/albums' exact component={Albums} />
         <Route path='/login' component={Login} />
       </HashRouter>
