@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, HashRouter } from 'react-router-dom'
 import Albums from './PlayGround/Albums'
 import HomePage from './PlayGround/HomePage';
 import Login from './Login/Login'
@@ -12,10 +12,10 @@ function App() {
     <div>
 
     <HomePage />
-      <BrowserRouter>
-        <Route path={process.env.PUBLIC_URL+'/albums'} exact component={Albums} />
-        <Route path={process.env.PUBLIC_URL+'/login'} component={Login} />
-      </BrowserRouter>
+      <HashRouter basename='/'>
+        <Route path='/albums' exact component={Albums} />
+        <Route path='/login' component={Login} />
+      </HashRouter>
       <section className='divider' />
       <Footer />
     </div>
