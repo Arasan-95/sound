@@ -19,13 +19,10 @@ export default class Home extends Component {
                 wH = $(window).height(),
                 wS = $(this).scrollTop();
                 let homecard = document.querySelector('.homecard')
-            console.log(hT,hH,wH,wS)
             if (wS > ((hT+hH-wH)-400)){
-                console.log('came in')
                 homecard.classList.add('animated' ,'slideInUp')
             }else{
                 homecard.classList.remove('animated' ,'slideInUp')
-                console.log('came out')
             }
 
         });

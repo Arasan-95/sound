@@ -20,9 +20,7 @@ function HomeCards(){
             wH = $(window).height(),
             wS = $(this).scrollTop();
             let homecard2 = document.querySelectorAll('.homecard2')
-        console.log(hT,hH,wH,wS)
         if (wS > ((hT+hH-wH)-400)){
-            console.log('came in')
             homecard2.forEach(item=>{
                 item.classList.add('animated' ,'slideInUp')
             })
@@ -30,7 +28,6 @@ function HomeCards(){
             homecard2.forEach(item=>{
                 item.classList.remove('animated' ,'slideInUp')
             })
-            console.log('came out')
         }
 
     });
