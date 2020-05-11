@@ -13,8 +13,8 @@ function App() {
 
     <HomePage />
       <BrowserRouter>
-        <Route path='/albums' exact component={Albums} />
-        <Route path='/login' component={Login} />
+        <Route path={process.env.PUBLIC_URL+'/albums'} exact component={Albums} />
+        <Route path={process.env.PUBLIC_URL+'/login'} component={Login} />
       </BrowserRouter>
       <section className='divider' />
       <Footer />
