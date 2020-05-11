@@ -9,7 +9,7 @@ export default class Login extends Component {
             '&scope=' +
             encodeURIComponent('user-read-private user-read-email') +
             '&redirect_uri=' +
-            encodeURIComponent('https://arasan-95.github.io/albums');
+            encodeURIComponent(process.env.PUBLIC_URL+'/albums');
 
         window.location = url;
 
