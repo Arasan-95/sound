@@ -29,7 +29,7 @@ class NavBar extends Component {
                                 <ul className='right hide-on-med-and-down' >
                                     <li><a href='#home-1' style={{ color: 'black' }}>Home</a></li>
                                     <li><a href='#home-2' style={{ color: 'black' }}>Music</a></li>
-                                    <li><a href={process.env.PUBLIC_URL+'/login' }style={{ color: 'black' }}>Albums</a></li>
+                                    <li><a href='/login' style={{ color: 'black' }}>Albums</a></li>
                                     <li><a target='_blank' href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Farasan-95.github.io%2Fsound%2F" style={{ color: 'black' }}><FontAwesomeIcon icon={faFacebook} /></a></li>
                                     <li><a target='_blank' href="https://wa.me/9688296929?text=Welcome%20to%20the%20sound%20app" style={{ color: 'black' }}><FontAwesomeIcon icon={faWhatsapp} /></a></li>
                                     <li><a target='_blank' href="mailto:chitrarasank@gmail.com?cc=secondemail@example.com, anotheremail@example.com, &bcc=lastemail@example.com&subject=Mail from our Website&body=Some body text here" style={{ color: 'black' }}><FontAwesomeIcon icon={faShareAlt} /></a></li>
