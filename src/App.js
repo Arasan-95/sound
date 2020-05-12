@@ -16,6 +16,7 @@ function App() {
       <HashRouter basename={process.env.PUBLIC_URL}>
         <Route path='/albums' component={Albums} />
         <Route path='/login' component={Login} />
+        <Route path='/login' component={Login} />
       </HashRouter>
       <section className='divider' />
       <Footer />
