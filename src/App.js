@@ -20,17 +20,14 @@ function App() {
   }
 
   const {access_token} = getHashParams()
-  console.log(access_token)
   
   return (
     <div>
       <HomePage />
       <HashRouter basename={process.env.PUBLIC_URL}>
-       <Switch>
        <Route path='/albums' component={Albums} />
        <Route path='/login' component={Login} />
        {access_token!=null ?<Route path='/' component={Albums} />:''}
-       </Switch>
       </HashRouter>
       <section className='divider' />
       <Footer />

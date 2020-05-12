@@ -20,6 +20,8 @@ class Albums extends Component{
             recommendedSongs: [],
             list2: []
         }
+
+        console.log('params :'+params.access_token)
     
         if(params.access_token){
           spotifyClient.setAccessToken(params.access_token)
@@ -28,8 +30,6 @@ class Albums extends Component{
 
 
       componentDidMount(){
-       
-        console.log('reached albums component')
         this.audio = document.querySelector('.audio1')
         spotifyClient.searchTracks('ALL').then(response=>response.tracks.items.filter(el=>el.preview_url!=null))
         .then(sub=>sub.forEach(a=>{
@@ -62,12 +62,13 @@ class Albums extends Component{
       getHashParams=()=> {
         var hashParams = {};
         var e, r = /([^&;=]+)=?([^&;]*)/g,
-            q = window.location.hash.substring(1);
+            q = window.location.hash.substring(2);
             
         while ( e = r.exec(q)) {
            hashParams[e[1]] = decodeURIComponent(e[2]);
         }
         return hashParams;
+        
       }
 
 
