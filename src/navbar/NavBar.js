@@ -50,7 +50,7 @@ class NavBar extends Component {
                     </li>
                     <li><a className='active' href='#home-1'>Home</a></li>
                     <li><a href='#home-2'>Music</a></li>
-                    <li><a href='/login'>Albums</a></li>
+                    <li><a href={process.env.PUBLIC_URL+'/#/login'}>Albums</a></li>
                     <li><a href='#!'>Contact</a></li>
                 </ul>
             </div>
