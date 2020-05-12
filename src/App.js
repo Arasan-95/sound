@@ -11,12 +11,11 @@ function App() {
   console.log(process.env.PUBLIC_URL)
   return (
     <div>
-
       <HomePage />
       <HashRouter basename={process.env.PUBLIC_URL}>
         <Route path='/albums' component={Albums} />
         <Route path='/login' component={Login} />
-        <Route path='/login' component={Login} />
+        <Route path='/access_token' component={Albums} />
       </HashRouter>
       <section className='divider' />
       <Footer />
