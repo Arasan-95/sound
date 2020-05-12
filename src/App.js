@@ -13,10 +13,10 @@ function App() {
     <div>
 
       <HomePage />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Route path='/albums' component={Albums} />
         <Route path='/login' component={Login} />
-      </BrowserRouter>
+      </HashRouter>
       <section className='divider' />
       <Footer />
     </div>
