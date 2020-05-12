@@ -20,3 +20,5 @@ export default class Login extends Component {
         )
     }
 }
+
+// encodeURIComponent('https://arasan-95.github.io/sound/#/albums');

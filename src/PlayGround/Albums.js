@@ -28,9 +28,8 @@ class Albums extends Component{
 
 
       componentDidMount(){
-
        
-
+        console.log('reached albums component')
         this.audio = document.querySelector('.audio1')
         spotifyClient.searchTracks('ALL').then(response=>response.tracks.items.filter(el=>el.preview_url!=null))
         .then(sub=>sub.forEach(a=>{
