@@ -29,9 +29,7 @@ class Albums extends Component{
 
       componentDidMount(){
 
-        $(document).ready(function () {
-          $(this).scrollTop(0);
-        });
+       
 
         this.audio = document.querySelector('.audio1')
         spotifyClient.searchTracks('ALL').then(response=>response.tracks.items.filter(el=>el.preview_url!=null))

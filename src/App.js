@@ -8,14 +8,15 @@ import Footer from "./Footer/Footer";
 import $ from 'jquery'
 function App() {
 
+  console.log(process.env.PUBLIC_URL)
   return (
     <div>
 
-    <HomePage />
-      <HashRouter basename={process.env.PUBLIC_URL}>
-        <Route path={process.env.PUBLIC_URL+'/albums'} exact component={Albums} />
-        <Route path={process.env.PUBLIC_URL+'/login'} component={Login} />
-      </HashRouter>
+      <HomePage />
+      <BrowserRouter >
+        <Route path={process.env.PUBLIC_URL + '/albums'} exact component={Albums} />
+        <Route path={process.env.PUBLIC_URL + '/login'} component={Login} />
+      </BrowserRouter>
       <section className='divider' />
       <Footer />
     </div>
